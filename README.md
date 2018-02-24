@@ -25,7 +25,7 @@ sample = np.random.normal(mu, sigma, 100000)
   <img width="450px" src="https://user-images.githubusercontent.com/4949982/36629733-bc97815c-199d-11e8-9b17-5a61c22abaa0.png">
 </div>
 
-正規分布の推定
+### 正規分布の推定
 
 ```python
 from scipy.stats import norm
@@ -55,7 +55,8 @@ sample = np.random.beta(a, b, 1000000) * 10 + 500
 <div align="center">
   <img width="450px" src="https://user-images.githubusercontent.com/4949982/36629808-a66999b4-199e-11e8-8e5a-9a8a93920964.png">
 </div>
-ベータ分布の推定
+
+### ベータ分布の推定
 
 ```console
 $ python3 beta-fit.py
@@ -78,6 +79,13 @@ import numpy as np
 
 data = np.random.poisson(2, 10000)
 ```
+
 <div align="center">
   <img width="450px" src="https://user-images.githubusercontent.com/4949982/36630026-99695a3e-19a2-11e8-96c7-f7d18b78013c.png">
 </div>
+
+### ポアソン分布の推定
+実は、[scipyのコミュニティ](http://thread.gmane.org/gmane.comp.python.scientific.user/31752)を見ると、poissonの分布の実装が議論され、見送られたという背景がありそうで、よく読んでいくと、poissonは連続値でなくて離散値だからとかで、この辺は私も悩むところなので、まあしょうがないのかなと
+
+
+  <img width="450px" src="https://user-images.githubusercontent.com/4949982/36630026-99695a3e-19a2-11e8-96c7-f7d18b78013c.png">
