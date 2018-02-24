@@ -26,6 +26,7 @@ sample = np.random.normal(mu, sigma, 100000)
 </div>
 
 正規分布の推定
+
 ```python
 from scipy.stats import norm
 
@@ -33,6 +34,7 @@ loc1, scale1 = norm.fit(sample)
 print(loc1, scale1)
 ```
 推定結果
+
 ```console
 $ python3 norm-fit.py
 mu=0.0005376030751632528, sigma=0.09992080119122795
@@ -42,6 +44,7 @@ mu=0.0005376030751632528, sigma=0.09992080119122795
 
 ## ベータ分布
 #### ベータ分布の作成
+
 ```python
 import numpy as np
 
@@ -53,7 +56,8 @@ sample = np.random.beta(a, b, 1000000) * 10 + 500
   <img width="450px" src="https://user-images.githubusercontent.com/4949982/36629808-a66999b4-199e-11e8-8e5a-9a8a93920964.png">
 </div>
 ベータ分布の推定
-```python
+
+```console
 $ python3 beta-fit.py
 a=1.9950566139379418, b=4.987435163823774, loc=500.00146380353016, scale=9.990241431834761
 ```
