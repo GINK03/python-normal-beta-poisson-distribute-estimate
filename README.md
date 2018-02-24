@@ -87,5 +87,19 @@ data = np.random.poisson(2, 10000)
 ### ポアソン分布の推定
 実は、[scipyのコミュニティ](http://thread.gmane.org/gmane.comp.python.scientific.user/31752)を見ると、poissonの分布の実装が議論され、見送られたという背景がありそうで、よく読んでいくと、poissonは連続値でなくて離散値だからとかで、この辺は私も悩むところなので、まあしょうがないのかなと
 
+ではどうするのかというと、無理くりですが、離散値であるパラメータを未知の状態にして、curve_fitを行うことで求めることができます　　
+```console
+# set bin middle
+bin_middles = 0.5*(bin_edges[1:] + bin_edges[:-1])
 
-  <img width="450px" src="https://user-images.githubusercontent.com/4949982/36630026-99695a3e-19a2-11e8-96c7-f7d18b78013c.png">
+# フィットに用いる関数をを設定することができるので、
+# poassonを書く未知をパラメータ未知のママ扱う
+def poisson(k, lamb):
+  return (lamb**k/factorial(k)) * np.exp(-lamb)
+
+# fit with curve_fit
+# paramtersでポアソン分布のパラメータ(lamb,)が出る
+parameters, cov_matrix = curve_fit(poisson, bin_middles, entries)
+print(parameters, cov_matrix)
+```
+
