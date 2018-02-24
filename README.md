@@ -107,3 +107,6 @@ print(parameters, cov_matrix)
 $ python3 poisson-fit.py
 [2.02988975] [[9.1122801e-05]]
 ```
+
+## 結
+簡単、便利、すごい
