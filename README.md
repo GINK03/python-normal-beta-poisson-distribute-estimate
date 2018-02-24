@@ -85,7 +85,7 @@ data = np.random.poisson(2, 10000)
 </div>
 
 ### ポアソン分布の推定
-実は、[scipyのコミュニティ](http://thread.gmane.org/gmane.comp.python.scientific.user/31752)を見ると、poissonの分布の実装が議論され、見送られたという背景がありそうで、よく読んでいくと、poissonは連続値でなくて離散値だからとかで、この辺は私も悩むところなので、まあしょうがないのかなと
+実は、[scipyのコミュニティ](https://github.com/scipy/scipy/issues/2184)を見ると、poissonの分布の実装が議論され、見送られたという背景がありそうで、よく読んでいくと、poissonは連続値でなくて離散値だからとかで、この辺は私も悩むところなので、まあしょうがないのかなと
 
 ではどうするのかというと、無理くりですが、離散値であるパラメータを未知の状態にして、curve_fitを行うことで求めることができます　　
 ```python
