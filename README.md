@@ -52,3 +52,13 @@ sample = np.random.beta(a, b, 1000000) * 10 + 500
 <div align="center">
   <img width="450px" src="https://user-images.githubusercontent.com/4949982/36629808-a66999b4-199e-11e8-8e5a-9a8a93920964.png">
 </div>
+ベータ分布の推定
+```python
+$ python3 beta-fit.py
+a=1.9950566139379418, b=4.987435163823774, loc=500.00146380353016, scale=9.990241431834761
+```
+うまくいく
+
+##### 注意
+a < 1.0, b < 1.0のような場合、ベータ分布は外側に大きくなるような性質があるのだが、このときにscipyのMLEではうまくフィットしない  
+(初期条件やなんやらが影響していると思います)  
