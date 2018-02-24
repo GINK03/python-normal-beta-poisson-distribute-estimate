@@ -21,3 +21,6 @@ mu, sigma = 0, 0.1 # mean and standard deviation
 # muは真ん中
 sample = np.random.normal(mu, sigma, 100000) * 1000
 ```
+<div align="center">
+  <img width="350px" src="https://user-images.githubusercontent.com/4949982/36629733-bc97815c-199d-11e8-9b17-5a61c22abaa0.png">
+</div>
