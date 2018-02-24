@@ -70,3 +70,10 @@ a < 1.0, b < 1.0のような場合、ベータ分布は外側に大きくなる�
 <div align="center">
   <img width="400px" src="https://user-images.githubusercontent.com/4949982/36629981-edfaca0c-19a1-11e8-9121-c6f9350ca777.png">
 </div>
+
+## ポアソン分布
+### ポアソン分布作成
+
+<div align="center">
+  <img width="450px" src="https://user-images.githubusercontent.com/4949982/36630026-99695a3e-19a2-11e8-96c7-f7d18b78013c.png">
+</div>
