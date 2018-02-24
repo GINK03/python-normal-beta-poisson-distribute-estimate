@@ -2,9 +2,9 @@ import numpy as np
 
 mu, sigma = 0, 0.1 # mean and standard deviation
 
-# sigmaは大きさ
+# sigmaは分散　
 # muは真ん中
-sample = np.random.normal(mu, sigma, 100000) * 1000
+sample = np.random.normal(mu, sigma, 100000) 
 
 obs_freq = {}
 for s in sample.tolist():
@@ -15,10 +15,11 @@ for s in sample.tolist():
   obs_freq[obs] += 1
 
 for obs, freq in sorted(obs_freq.items(), key=lambda x:x[0]):
-  print(obs, freq)
+  #print(obs*0.01, freq)
+  ...
 
 
 from scipy.stats import norm
 
 loc1, scale1 = norm.fit(sample)
-print(loc1, scale1)
+print(f'mu={loc1}, sigma={scale1}')
