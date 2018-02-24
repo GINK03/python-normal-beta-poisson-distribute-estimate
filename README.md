@@ -8,3 +8,16 @@
 - ポアソンとか
 
 
+## 正規分布
+
+### 正規分布の作成
+numpyのモジュールでわさっと作ることができます
+```python
+import numpy as np
+
+mu, sigma = 0, 0.1 # mean and standard deviation
+
+# sigmaは大きさ
+# muは真ん中
+sample = np.random.normal(mu, sigma, 100000) * 1000
+```
