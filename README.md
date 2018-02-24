@@ -74,7 +74,7 @@ a < 1.0, b < 1.0のような場合、ベータ分布は外側に大きくなる�
 
 ## ポアソン分布
 ### ポアソン分布作成
-```console
+```python
 import numpy as np
 
 data = np.random.poisson(2, 10000)
@@ -88,7 +88,7 @@ data = np.random.poisson(2, 10000)
 実は、[scipyのコミュニティ](http://thread.gmane.org/gmane.comp.python.scientific.user/31752)を見ると、poissonの分布の実装が議論され、見送られたという背景がありそうで、よく読んでいくと、poissonは連続値でなくて離散値だからとかで、この辺は私も悩むところなので、まあしょうがないのかなと
 
 ではどうするのかというと、無理くりですが、離散値であるパラメータを未知の状態にして、curve_fitを行うことで求めることができます　　
-```console
+```python
 # set bin middle
 bin_middles = 0.5*(bin_edges[1:] + bin_edges[:-1])
 
@@ -102,4 +102,8 @@ def poisson(k, lamb):
 parameters, cov_matrix = curve_fit(poisson, bin_middles, entries)
 print(parameters, cov_matrix)
 ```
-
+結果
+```console
+$ python3 poisson-fit.py
+[2.02988975] [[9.1122801e-05]]
+```
